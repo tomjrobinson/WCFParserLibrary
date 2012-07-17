@@ -13,14 +13,15 @@ namespace VolaCalcService
         public const string gYAHOO_HIS_URL = "http://chart.yahoo.com/table.csv?a={0}&b={1}&c={2}&d={3}&e={4}&f={5}&s={6}&y={7}&g={8}";
         StockInfo thisStock;
         int stockType;
+        DateTime Start, End;
 
-
-        public YahooFinanceDAO(string StockName, string Type)
+        public YahooFinanceDAO(string StockName, string Type, DateTime StartDate, DateTime EndDate)
         {
             thisStock.StockSymbol = StockName;
             thisStock.DateType = Type;
             stockType = 6;
-
+            Start = StartDate;
+            End = EndDate;
             
         }
 
@@ -29,15 +30,15 @@ namespace VolaCalcService
             string sTempURL, sHTMLFileHisDay;
             int iStartDay, iStartYear, iStartMonth, iEndDay, iEndYear, iEndMonth;
 
-            iEndDay = DateTime.Now.Day;
+            iEndDay = End.Day;
             //This actually sets it to this month, not last month.
-            iEndMonth = DateTime.Now.Month - 1;
-            iEndYear = DateTime.Now.Year;
+            iEndMonth = End.Month - 1;
+            iEndYear = End.Year;
 
-            iStartDay = 1;
+            iStartDay = Start.Day;
             //Sets it to January.
-            iStartMonth = 0;
-            iStartYear = 1990;
+            iStartMonth = Start.Month-1;
+            iStartYear = Start.Year;
 
             sTempURL = string.Format(gYAHOO_HIS_URL, iStartMonth, iStartDay, iStartYear, iEndMonth, iEndDay, iEndYear, thisStock.StockSymbol, "0", thisStock.DateType);
             sHTMLFileHisDay = GetURLSource(sTempURL);

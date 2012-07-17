@@ -11,11 +11,13 @@ namespace VolaCalcService
     {
         List<StockData> AdjCloseList;
 
-        public void GetURLData(string StockName, string Type)
+        public List<StockData> GetURLData(string StockName, string Type, DateTime StartDate, DateTime EndDate)
         {
-            YahooFinanceDAO yahooDAO = new YahooFinanceDAO(StockName, Type);
+            YahooFinanceDAO yahooDAO = new YahooFinanceDAO(StockName, Type, StartDate, EndDate);
 
             AdjCloseList = yahooDAO.GetAdjCloseData();
+
+            return AdjCloseList;
         }
     }
 }

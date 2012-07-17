@@ -11,6 +11,6 @@ namespace VolaCalcService
     public interface IParsingFunctions
     {
         [OperationContract]
-        void GetURLData(string StockName, string Type);
+        List<StockData> GetURLData(string StockName, string Type, DateTime StartDate, DateTime EndDate);
     }
 }
