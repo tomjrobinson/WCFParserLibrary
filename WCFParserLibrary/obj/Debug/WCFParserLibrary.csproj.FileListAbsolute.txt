@@ -1,0 +1,6 @@
+C:\Users\tom\Documents\GitHub\WCFParserLibrary\WCFParserLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\tom\Documents\GitHub\WCFParserLibrary\WCFParserLibrary\bin\Debug\WCFParserLibrary.dll.config
+C:\Users\tom\Documents\GitHub\WCFParserLibrary\WCFParserLibrary\bin\Debug\WCFParserLibrary.dll
+C:\Users\tom\Documents\GitHub\WCFParserLibrary\WCFParserLibrary\bin\Debug\WCFParserLibrary.pdb
+C:\Users\tom\Documents\GitHub\WCFParserLibrary\WCFParserLibrary\obj\Debug\WCFParserLibrary.dll
+C:\Users\tom\Documents\GitHub\WCFParserLibrary\WCFParserLibrary\obj\Debug\WCFParserLibrary.pdb
